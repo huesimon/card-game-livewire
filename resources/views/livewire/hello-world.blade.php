@@ -1,9 +1,9 @@
-    <div>
+<div>
     <input wire:model="name" type="text">
     hello {{ $name }}
-    <button wire:click='newEvent'>NewEvent</button>
-    <button wire:click='buttonClick'>buttonClick</button>
-    @if ($showNewOrderNotification)
-        YES
-    @endif
+    @foreach ($lobby as $player)
+        {{ $player['name'] }}
+
+        {{-- {{ json_encode($player) }} --}}
+    @endforeach
 </div>

@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/card', function () {
     return view('card');
-});
+})->middleware(['auth']);
 
 
 require __DIR__.'/auth.php';
